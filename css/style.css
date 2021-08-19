@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+/* #cards, #card, .poster, .title > div, .price, .price > div, .rating, button, button > img {
+    border: 1px solid orange;
+} */
+
+#cards {
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#card {
+    width: 300px;
+    height: 675px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    transition: 1s;
+}
+#card:hover {
+    box-shadow: 0 0 15px 10px aqua;
+    transition: 1s;
+}
+
+#toy {
+    width: 300px;
+    height: 675px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    transition: 1s;
+}
+#toy:hover {
+    box-shadow: 0 0 15px 10px aqua;
+    transition: 1s;
+}
+
+#ferdinard {
+    width: 300px;
+    height: 675px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    transition: 1s;
+}
+#ferdinard:hover {
+    box-shadow: 0 0 15px 10px aqua;
+    transition: 1s;
+}
+
+.poster {
+    width: 280px;
+    height: 420px;
+    margin: 10px 0;
+}
+
+.title {
+    width: 280px;
+    height: 75px;
+    color: #616161;
+    font-size: 30px;
+    line-height: 0.9;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.price {
+    width: 280px;
+    height: 45px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.price div {
+    display: flex;
+    align-items: center;
+}
+.price div:nth-child(1) {
+    font-size: 30px;
+    color: #232323;
+    font-weight: 600;
+}
+.price div:nth-child(2) {
+    font-size: 19px;
+    color: #868282;
+    font-weight: 600;
+    text-decoration: line-through;
+}
+
+/* Стили для звёздочек */
+.rating {
+    width: 280px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    /* line-height: 0.75; */
+}
+.rating span {
+    color: gold;
+}
+.rating__body {
+    position: relative;
+}
+.rating__body::before {
+    content: "★★★★★";
+    display: block;
+}
+.rating__active {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.rating__active::before {
+    content: "★★★★★";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #ffd300;
+}
+.rating__items {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.rating__item {
+    flex: 0 0 15%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.rating__value {
+    font-size: 40%;
+    padding: 0px 0px 0px 5px;
+}
+/* Конец стилей для звёздочек */
+
+button {
+    width: 300px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+button img {
+    width: 280px;
+    height: 65px;
+}
+/* Устанавливаем правило для смены цвета кнопки */
+@keyframes hue {
+    from {
+        filter: hue-rotate(0deg); /* от */
+    }
+    to {
+        filter: hue-rotate(-360deg); /* до */
+    }
+}
+.hue {
+    animation: hue 10s infinite linear; /* свойство animation меняющее один градиент-цвет на другой в течении 10 секунд,
+                                        и так бесконечно */
+}
+
+.prelative img:nth-child(1){
+    position: relative;
+    bottom: 550px;
+    left: 60px;
+}
+.prelative img:nth-child(2) {
+    position: relative;
+    right: 130px;
+    bottom: 330px;
+    /* opacity: 0; */
+}
